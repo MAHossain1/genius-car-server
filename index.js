@@ -33,7 +33,7 @@ function verifyToken(req, res, next) {
 }
 
 async function run() {
-  await client.connect();
+  client.connect();
 
   try {
     const serviceCollection = client.db("geniusCar").collection("services");
