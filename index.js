@@ -33,6 +33,8 @@ function verifyToken(req, res, next) {
 }
 
 async function run() {
+  await client.connect();
+
   try {
     const serviceCollection = client.db("geniusCar").collection("services");
     const orderCollection = client.db("geniusCar").collection("orders");
